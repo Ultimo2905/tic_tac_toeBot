@@ -1,0 +1,121 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+body{
+  font-family:sans-serif;
+  min-width:410px;
+}
+header{
+  background: #555;
+    color:#fff;
+  width:100%;
+}
+header .content{
+  text-align:center;
+  display:grid;
+  grid-template-columns:auto auto auto;
+  font-size:30px;
+}
+.bar{
+  display:inline-block;
+  width:50px;
+  height:5px;
+  background: #fff;
+  border-radius:10px;
+  position:relative;
+  top:-7px;
+  margin:0 10px;
+}
+header .content input{
+  margin:10px;
+  position:relative;
+  top:-4px;
+}
+header .content input:disabled{
+  background: #000;
+}
+.wrapper{
+  display:grid;
+  grid-template-columns:auto auto;
+}
+.gameboard{
+  width:440px;
+  height:440px;
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns:auto auto auto;
+  background: #000;
+  margin: 10px auto;
+  overflow:hidden
+}
+.case{
+  background: #fff;
+  width:143px;
+  height:140px;
+  position:relative;
+  cursor:pointer;
+}
+.circle{
+  border:10px solid red;
+  border-radius:50%;
+  width:70%;
+  height:70%;
+  margin:auto;
+  position:absolute;
+  top:0;bottom:0;
+  right:0;left:0;
+}
+.cross{
+  background: #f00;
+  border-radius:10px;
+  width:90%;
+  height:15px;
+  margin:auto;
+  position:absolute;
+  top:0;bottom:0;
+  right:0;left:0;
+  transform:rotatez(50deg);
+}
+.cross:after{
+  content:"";
+  background: #f00;
+  border-radius:10px;
+  width:90%;
+  height:15px;
+  margin:auto;
+  position:absolute;
+  top:0;bottom:-2px;
+  right:0;left:-6px;
+  transform:rotatez(-102deg);
+}
+button{
+  font-size:20px;
+  border:0;
+  padding:10px;
+  border-radius:10px;
+  width:140px;
+  display:block;
+  outline:none;
+  cursor:pointer;
+  margin:30px auto;
+}
+.panel{
+  position:relative;
+}
+.panel h1{
+  text-align:center;
+  margin:10px;
+  font-size:50px;
+  text-shadow:4px 5px 5px rgba(0,0,0,0.4);
+}
+button:hover{
+  color:#fff;
+  background: #555;
+}
+.screen{
+  text-align:center;
+  font-size:40px;
+  color:red;
+}
